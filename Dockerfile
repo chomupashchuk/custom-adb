@@ -1,7 +1,9 @@
 FROM sorccu/adb
 
-RUN apk add --update --no-cache python3
+RUN apk add --update bash
 
-COPY my_adb.py my_adb.py
+COPY entrypoint.sh /entrypoint.sh
 
-CMD [ "python3", "my_adb.py", "-u" ]
+ENV TV_IPS ""
+
+CMD [ "/bin/bash", "/entrypoint.sh" ]
