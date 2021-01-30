@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  adb:
+    build: ./
+    image: "chomupashchuk/custom-adb:1.3"
+    container_name: "adb"
+  # environment:
+  #   - TV_IPS="192.168.1.111 192.168.1.112"
