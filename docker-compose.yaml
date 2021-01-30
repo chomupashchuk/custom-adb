@@ -4,5 +4,7 @@ services:
     build: ./
     image: "chomupashchuk/custom-adb:1.3"
     container_name: "adb"
-  # environment:
-  #   - TV_IPS="192.168.1.111 192.168.1.112"
+    ports:
+      - "5037:5037"
+    environment:
+      - TV_IPS="192.168.1.111 192.168.1.112"
