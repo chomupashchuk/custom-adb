@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ip_addresses=$( echo ${TV_IPS} | tr -d '"')
 ip_list=()
 
@@ -19,6 +21,8 @@ do
     then
         echo "Valid IP address ${ip_address} was detected."
         ip_list+=( ${ip_address} )
+    else
+        echo "IP address ${ip_address} does not seem valid."
     fi
 
 done
